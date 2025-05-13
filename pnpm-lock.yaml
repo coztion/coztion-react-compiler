@@ -33,6 +33,9 @@ importers:
       eslint:
         specifier: ^9.25.0
         version: 9.26.0
+      eslint-plugin-react-compiler:
+        specifier: 19.1.0-rc.1
+        version: 19.1.0-rc.1(eslint@9.26.0)
       eslint-plugin-react-hooks:
         specifier: 6.0.0-rc1
         version: 6.0.0-rc1(eslint@9.26.0)
@@ -140,6 +143,13 @@ packages:
     resolution: {integrity: sha512-QYLs8299NA7WM/bZAdp+CviYYkVoYXlDW2rzliy3chxd1PQjej7JORuMJDJXJUb9g0TT+B99EwaVLKmX+sPXWw==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+
+  '@babel/plugin-proposal-private-methods@7.18.6':
+    resolution: {integrity: sha512-nutsvktDItsNn4rpGItSNV2sz1XwS+nfU0Rg8aCx3W3NOKVzdMjJRu0O5OkgDp3ZGICSTbgRpxZoWsxoKRvbeA==}
+    engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-methods instead.
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
 
   '@babel/plugin-transform-private-methods@7.27.1':
     resolution: {integrity: sha512-10FVt+X55AjRAYI9BrdISN9/AQWHqldOeZDUoLyif1Kn05a56xVBXb8ZouL8pZ9jem8QpXaOt8TS7RHUIS+GPA==}
@@ -761,6 +771,12 @@ packages:
   escape-string-regexp@4.0.0:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
+
+  eslint-plugin-react-compiler@19.1.0-rc.1:
+    resolution: {integrity: sha512-3umw5eqZXapBl7aQGmvcjheKhUbsElb9jTETxRZg371e1LG4EPs/zCHt2JzP+wNcdaZWzjU/R730zPUJblY2zw==}
+    engines: {node: ^14.17.0 || ^16.0.0 || >= 18.0.0}
+    peerDependencies:
+      eslint: '>=7'
 
   eslint-plugin-react-hooks@6.0.0-rc1:
     resolution: {integrity: sha512-I4ntWyjqgGemGtOU85FUdVo00h0i0Y5xvQ7a8EVxyzjOZsxXaxvkKBcYoXbP97QDvDjMzY/nGIvfdB/WRLTGxQ==}
@@ -1549,6 +1565,14 @@ snapshots:
     dependencies:
       '@babel/types': 7.27.1
 
+  '@babel/plugin-proposal-private-methods@7.18.6(@babel/core@7.27.1)':
+    dependencies:
+      '@babel/core': 7.27.1
+      '@babel/helper-create-class-features-plugin': 7.27.1(@babel/core@7.27.1)
+      '@babel/helper-plugin-utils': 7.27.1
+    transitivePeerDependencies:
+      - supports-color
+
   '@babel/plugin-transform-private-methods@7.27.1(@babel/core@7.27.1)':
     dependencies:
       '@babel/core': 7.27.1
@@ -2126,6 +2150,18 @@ snapshots:
   escape-html@1.0.3: {}
 
   escape-string-regexp@4.0.0: {}
+
+  eslint-plugin-react-compiler@19.1.0-rc.1(eslint@9.26.0):
+    dependencies:
+      '@babel/core': 7.27.1
+      '@babel/parser': 7.27.2
+      '@babel/plugin-proposal-private-methods': 7.18.6(@babel/core@7.27.1)
+      eslint: 9.26.0
+      hermes-parser: 0.25.1
+      zod: 3.24.4
+      zod-validation-error: 3.4.1(zod@3.24.4)
+    transitivePeerDependencies:
+      - supports-color
 
   eslint-plugin-react-hooks@6.0.0-rc1(eslint@9.26.0):
     dependencies:
