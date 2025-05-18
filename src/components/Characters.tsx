@@ -25,6 +25,7 @@ const CharactersContainer = styled("div")`
   justify-content: center;
 
   flex-wrap: wrap;
+  overflow: scroll;
 `;
 
 export default Characters;
