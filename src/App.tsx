@@ -1,13 +1,13 @@
 import { styled } from "@mui/material";
 
-import InputSplitter from "./components/InputSplitter";
+import CompilerTester from "./components/CompilerTester";
 
 import "@/App.css";
 
 const App = () => {
   return (
     <AppContainer>
-      <InputSplitter />
+      <CompilerTester />
     </AppContainer>
   );
 };
