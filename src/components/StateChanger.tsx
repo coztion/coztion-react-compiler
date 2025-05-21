@@ -1,23 +1,23 @@
 import { styled } from "@mui/material";
 
-interface InputFieldProps {
+interface StateChangerProps {
   onChange: (value: string) => void;
 }
 
-const InputField = ({ onChange }: InputFieldProps) => {
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+const StateChanger = ({ onChange }: StateChangerProps) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
     onChange(value);
   };
 
   return (
-    <InputContainer>
-      <StyledTextField onChange={handleInputChange} />
-    </InputContainer>
+    <StateChangerContainer>
+      <StyledTextField onChange={handleChange} />
+    </StateChangerContainer>
   );
 };
 
-const InputContainer = styled("div")`
+const StateChangerContainer = styled("div")`
   width: 100%;
 
   padding: 25px;
@@ -41,4 +41,4 @@ const StyledTextField = styled("input")`
   }
 `;
 
-export default InputField;
+export default StateChanger;
