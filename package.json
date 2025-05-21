@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:scan": "cross-env VITE_REACT_SCAN=ENABLED vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -22,7 +23,8 @@
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^7.1.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-scan": "^0.3.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
@@ -30,6 +32,7 @@
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",
     "babel-plugin-react-compiler": "19.1.0-rc.1",
+    "cross-env": "^7.0.3",
     "eslint": "^9.25.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-react-compiler": "19.1.0-rc.1",
