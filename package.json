@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "dev:scan": "cross-env VITE_REACT_SCAN=ENABLED vite",
+    "dev:calc": "cross-env VITE_REACT_COMPILE=CALC vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
