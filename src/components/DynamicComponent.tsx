@@ -1,6 +1,6 @@
 import { styled } from "@mui/material";
 
-import DynamicStateHolder from "./StaticStateHolder";
+import DynamicStateHolder from "./DynamicStateHolder";
 
 interface DynamicComponentProps {
   dynamicValue: string;
