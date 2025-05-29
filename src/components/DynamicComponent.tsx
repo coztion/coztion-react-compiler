@@ -6,7 +6,9 @@ interface DynamicComponentProps {
   dynamicValue: string;
 }
 
-const DynamicComponent = ({ dynamicValue }: DynamicComponentProps) => {
+export default function DynamicComponent({
+  dynamicValue,
+}: DynamicComponentProps) {
   const splittedValues = dynamicValue.split("");
 
   return (
@@ -16,7 +18,7 @@ const DynamicComponent = ({ dynamicValue }: DynamicComponentProps) => {
       ))}
     </DynamicComponentContainer>
   );
-};
+}
 
 const DynamicComponentContainer = styled("div")`
   width: 100%;
@@ -27,5 +29,3 @@ const DynamicComponentContainer = styled("div")`
   flex-wrap: wrap;
   overflow: scroll;
 `;
-
-export default DynamicComponent;

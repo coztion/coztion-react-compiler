@@ -6,7 +6,7 @@ import DynamicComponent from "@/components/DynamicComponent";
 import StateChanger from "@/components/StateChanger";
 import StaticComponent from "@/components/StaticComponent";
 
-const CompilerTester = () => {
+export default function CompilerTester() {
   const [value, setValue] = useState("");
 
   const handleTextStateChange = (changedValue: string) => {
@@ -20,7 +20,7 @@ const CompilerTester = () => {
       <StaticComponent />
     </CompilerTesterContainer>
   );
-};
+}
 
 const CompilerTesterContainer = styled("div")`
   width: 60vw;
@@ -38,5 +38,3 @@ const CompilerTesterContainer = styled("div")`
     20px 20px 50px #151940,
     -20px -20px 50px #3f4dc6;
 `;
-
-export default CompilerTester;
