@@ -4,13 +4,13 @@ import CompilerTester from "./components/CompilerTester";
 
 import "@/App.css";
 
-const App = () => {
+export default function App() {
   return (
     <AppContainer>
       <CompilerTester />
     </AppContainer>
   );
-};
+}
 
 const AppContainer = styled("div")`
   width: 100vw;
@@ -22,5 +22,3 @@ const AppContainer = styled("div")`
 
   background: #2a3383;
 `;
-
-export default App;

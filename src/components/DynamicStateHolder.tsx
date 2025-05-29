@@ -4,7 +4,7 @@ interface DynamicStateHolderProps {
   value: string;
 }
 
-const DynamicStateHolder = ({ value }: DynamicStateHolderProps) => {
+export default function DynamicStateHolder({ value }: DynamicStateHolderProps) {
   const isEmpty = value.trim() === "";
 
   return (
@@ -12,7 +12,7 @@ const DynamicStateHolder = ({ value }: DynamicStateHolderProps) => {
       {value}
     </DynamicStateHolderContainer>
   );
-};
+}
 
 interface DynamicStateHolderContainerProps {
   $showBorder?: boolean;
@@ -27,5 +27,3 @@ const DynamicStateHolderContainer = styled(
   border: $showBorder ? "1px solid white" : "none",
   borderRadius: "0.5rem",
 }));
-
-export default DynamicStateHolder;
