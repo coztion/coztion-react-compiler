@@ -4,7 +4,7 @@ interface StateChangerProps {
   onChange: (value: string) => void;
 }
 
-export default function StateChanger({ onChange }: StateChangerProps) {
+function StateChanger({ onChange }: StateChangerProps) {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
     onChange(value);
@@ -40,3 +40,5 @@ const StyledTextField = styled("input")`
     border-color: black;
   }
 `;
+
+export default StateChanger;
