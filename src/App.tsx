@@ -4,7 +4,7 @@ import CompilerTester from "./components/CompilerTester";
 
 import "@/App.css";
 
-export default function App() {
+function App() {
   return (
     <AppContainer>
       <CompilerTester />
@@ -22,3 +22,5 @@ const AppContainer = styled("div")`
 
   background: #2a3383;
 `;
+
+export default App;
