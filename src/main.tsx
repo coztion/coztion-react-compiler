@@ -1,10 +1,10 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import { createRoot } from "react-dom/client";
+import { scan } from "react-scan"; // must be imported before React and React DOM
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+import App from "@/App";
+
+scan({
+  enabled: import.meta.env.VITE_REACT_SCAN === "SCAN",
+});
+
+createRoot(document.getElementById("root")!).render(<App />);
